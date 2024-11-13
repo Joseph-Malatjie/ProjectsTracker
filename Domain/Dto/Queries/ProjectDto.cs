@@ -8,5 +8,4 @@ public class ProjectDto
     public int Capacity { get; set; }
     public string Status { get; set; }
     public string ProjectManagerFullName { get; set; }
-    public Rating.Rating Rating { get; set; }
 }

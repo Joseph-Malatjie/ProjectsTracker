@@ -1,6 +1,9 @@
-﻿namespace Application.Requests.Commands.Project;
+﻿using Domain.Dto.Commands;
+using MediatR;
 
-public class AddProjectCommand
+namespace Application.Requests.Commands.Project;
+
+public class AddProjectCommand : IRequest<Unit>
 {
-    
+    public AddProjectDto Project { get; set; }
 }

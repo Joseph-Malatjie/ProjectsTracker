@@ -1,6 +1,6 @@
-﻿namespace Application.Requests.Queries.Project;
+﻿using Domain.Dto.Queries;
+using MediatR;
 
-public class GetProjectsQuery
-{
-    
-}
+namespace Application.Requests.Queries.Project;
+
+public class GetProjectsQuery : IRequest<List<GetProjectsDto>>;

@@ -1,6 +1,9 @@
-﻿namespace Application.Requests.Queries.Users;
+﻿using Domain.Dto.Queries;
+using MediatR;
 
-public class GetUsersQuery
+namespace Application.Requests.Queries.Users;
+
+public class GetUsersQuery : IRequest<List<GetUsersDto>>
 {
     
 }

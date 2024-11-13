@@ -1,6 +1,9 @@
-﻿namespace Application.Requests.Queries.Users;
+﻿using Domain.Dto.Queries;
+using MediatR;
 
-public class GetUserByIdQuery
+namespace Application.Requests.Queries.Users;
+
+public class GetUserByIdQuery : IRequest<GetUserByIdDto>
 {
-    
+    public Guid UserId { get; set; }
 }

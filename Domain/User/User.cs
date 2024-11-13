@@ -11,5 +11,6 @@ public abstract class User
 	public string Initials { get; set; }
 	public DateTime StartDate { get; set; }
 	public DateTime DateCreated { get; set; }
+	public UserType UserType { get; set; } 
+	public ICollection<Address.Address> Address { get; set; }
 }
-

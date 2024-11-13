@@ -1,6 +1,9 @@
-﻿namespace Application.Requests.Commands.Rating;
+﻿using Domain.Dto.Commands;
+using MediatR;
 
-public class AddRatingCommand
+namespace Application.Requests.Commands.Rating;
+
+public class AddRatingCommand : IRequest<Unit>
 {
-    
+    public AddRatingDto Rating { get; set; }
 }

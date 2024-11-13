@@ -1,9 +1,11 @@
-﻿using Domain.User;
-
-namespace Domain.Dto;
+﻿namespace Domain.Dto.Commands;
 
 public class AddDeveloperDto
 {
+    public AddDeveloperDto()
+    {
+        
+    }
     public string FirstName { get; set; }
     public string LastName { get; set; }
     public string Title { get; set; }
@@ -11,7 +13,6 @@ public class AddDeveloperDto
     public string Initials { get; set; }
     public DateTime StartDate { get; set; }
     public DateTime DateCreated { get; set; }
-    public UserType UserType { get; set; } 
     public int Capacity { get; set; }
-    public ICollection<Address.Address> Address { get; set; }
+    public List<AddressDto> Address { get; set; }
 }

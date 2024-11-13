@@ -1,6 +1,11 @@
-﻿namespace Application.Requests.Queries.Rating;
+﻿using Domain.Dto.Queries;
+using MediatR;
+using Microsoft.AspNetCore.Mvc;
 
-public class GetProjectRatingQuery
+namespace Application.Requests.Queries.Rating;
+
+public class GetProjectRatingQuery : IRequest<GetRatingDto>
 {
-    
+    [FromQuery] public Guid UserId { get; set; }
+    [FromQuery] public Guid ProjectId { get; set; }
 }
